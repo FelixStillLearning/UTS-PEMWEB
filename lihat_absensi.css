@@ -1,0 +1,178 @@
+/* Variables for color scheme */
+:root {
+    /* Primary Colors */
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    
+    /* Secondary Colors */
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    
+    /* Background Colors */
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    
+    /* Accent Colors */
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    
+    /* Text Colors */
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
+}
+
+/* Reset dan basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+/* Tabel Styling */
+.absensi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.absensi-table th,
+.absensi-table td {
+    border: 1px solid var(--neutral-grey);
+    padding: 1rem;
+    text-align: left;
+}
+
+.absensi-table th {
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+}
+
+.absensi-table tr:nth-child(even) {
+    background-color: var(--light-grey);
+}
+
+/* Logout Button */
+.logout-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--light-orange);
+    color: var(--clean-white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.logout-btn:hover {
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .dashboard-container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.absensi-table {
+    width: 100%;
+    border-collapse: separate;  /* Penting: Gunakan separate alih-alih collapse */
+    border-spacing: 0;         /* Hilangkan spasi antar sel */
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--neutral-grey); /* Outline untuk seluruh tabel */
+}
+
+/* Header Cells */
+.absensi-table th {
+    background: var(--primary-blue);
+    color: var(--clean-white);
+    padding: 1rem;
+    text-align: left;
+    border: none;             /* Hilangkan border default */
+    border-right: 1px solid var(--neutral-grey);
+}
+
+.absensi-table th:last-child {
+    border-right: none;      /* Hilangkan border kanan pada sel terakhir */
+}
+
+/* Table Cells */
+.absensi-table td {
+    padding: 1rem;
+    text-align: left;
+    border: none;            /* Hilangkan border default */
+    border-right: 1px solid var(--neutral-grey);
+    border-bottom: 1px solid var(--neutral-grey);
+}
+
+.absensi-table td:last-child {
+    border-right: none;     /* Hilangkan border kanan pada sel terakhir */
+}
+
+/* Zebra Striping */
+.absensi-table tr:nth-child(even) {
+    background: var(--light-grey);
+}
+
+/* Last Row */
+.absensi-table tr:last-child td {
+    border-bottom: none;    /* Hilangkan border bawah pada baris terakhir */
+}
+
+/* Hover Effect */
+.absensi-table tbody tr:hover {
+    background-color: rgba(135, 206, 235, 0.1); /* Subtle hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .absensi-table {
+        font-size: 0.9rem;
+        border-radius: 8px; /* Slightly smaller radius for mobile */
+    }
+    
+    .absensi-table th,
+    .absensi-table td {
+        padding: 0.8rem;
+    }
+}

@@ -1,0 +1,133 @@
+/* Variables for color scheme */
+:root {
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
+}
+
+/* Reset dan basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* Input and Select Styling */
+input[type="text"],
+input[type="password"],
+select {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--neutral-grey);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: var(--primary-blue);
+    outline: none; /* Remove the default outline */
+}
+
+/* Button Styling */
+input[type="submit"].btn {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background-color: var(--light-orange);
+    color: var(--clean-white);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600; /* Increased font weight for emphasis */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem; /* Adjust font size for better readability */
+}
+
+input[type="submit"].btn:hover {
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 1.5rem; /* Increased margin for better spacing */
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600; /* Increased font weight for emphasis */
+    transition: all 0.3s ease;
+    text-align: center; /* Centered text for better appearance */
+    font-size: 1rem; /* Adjust font size for better readability */
+}
+
+.back-btn:hover {
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .dashboard-container {
+        padding: 1.5rem;
+        width: 90%; /* Set width to 90% for smaller screens */
+    }
+
+    form {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

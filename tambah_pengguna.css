@@ -1,0 +1,125 @@
+/* tambah_pengguna.css */
+:root {
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    --text-dark: #333333;
+}
+
+/* Reset dan basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Input dan Select Styling */
+label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--neutral-grey);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: var(--primary-green);
+    outline: none;
+}
+
+/* Button Styling */
+input[type="submit"],
+a.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-green);
+    color: var(--clean-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Non-underline for anchor links */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover,
+a.button:hover {
+    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    transform: scale(1.05);
+}
+
+/* Kembali Button Styling */
+a.button {
+    background-color: var(--bright-yellow); /* Background color for the Kembali button */
+    color: var(--dark-blue); /* Text color for the Kembali button */
+}
+
+a.button:hover {
+    background-color: #F0A500; /* Darker color on hover for the Kembali button */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    input[type="submit"] {
+        font-size: 14px;
+    }
+
+    a.button {
+        font-size: 14px; /* Same size as submit button on smaller screens */
+    }
+}

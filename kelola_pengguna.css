@@ -1,0 +1,219 @@
+/* Variables for color scheme */
+:root {
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
+}
+
+/* Reset dan basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+/* Tabel Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid var(--neutral-grey);
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+}
+
+tr:hover {
+    background-color: var(--light-orange);
+}
+
+/* Tautan Styling */
+a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+/* Tombol Umum Styling */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--clean-white);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Tombol Aksi */
+.edit-btn {
+    background-color: var(--primary-green);
+}
+
+.edit-btn:hover {
+    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background-color: var(--light-orange);
+}
+
+.delete-btn:hover {
+    background-color: var(--bright-yellow); /* Warna lebih cerah saat hover */
+    transform: translateY(-2px);
+}
+
+/* Tombol Tambah dan Kembali */
+.logout-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--light-orange);
+    color: var(--clean-white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.logout-btn:hover {
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+}
+
+/* Additional Animation for Table Rows */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tr {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+tr:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+tr:nth-child(even) {
+    animation-delay: 0.2s;
+}
+/* Table Container Wrapper */
+.pengguna-table {
+    width: 100%;
+    border-collapse: separate;  /* Important: Use separate instead of collapse */
+    border-spacing: 0;         /* Remove spacing between cells */
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--neutral-grey); /* Outline for the entire table */
+}
+
+/* Header Cells */
+.pengguna-table th {
+    background: var(--primary-blue);
+    color: var(--clean-white);
+    padding: 1rem;
+    text-align: left;
+    border: none;             /* Remove default border */
+    border-right: 1px solid var(--neutral-grey);
+}
+
+.pengguna-table th:last-child {
+    border-right: none;      /* Remove right border on the last header cell */
+}
+
+/* Table Cells */
+.pengguna-table td {
+    padding: 1rem;
+    text-align: left;
+    border: none;            /* Remove default border */
+    border-right: 1px solid var(--neutral-grey);
+    border-bottom: 1px solid var(--neutral-grey);
+}
+
+.pengguna-table td:last-child {
+    border-right: none;     /* Remove right border on the last cell */
+}
+
+/* Zebra Striping */
+.pengguna-table tr:nth-child(even) {
+    background: var(--light-grey);
+}
+
+/* Last Row */
+.pengguna-table tr:last-child td {
+    border-bottom: none;    /* Remove bottom border on the last row */
+}
+
+/* Hover Effect */
+.pengguna-table tbody tr:hover {
+    background-color: rgba(135, 206, 235, 0.1); /* Subtle hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pengguna-table {
+        font-size: 0.9rem;
+        border-radius: 8px; /* Slightly smaller radius for mobile */
+    }
+    
+    .pengguna-table th,
+    .pengguna-table td {
+        padding: 0.8rem;
+    }
+}

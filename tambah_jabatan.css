@@ -1,0 +1,105 @@
+/* Variables for color scheme */
+:root {
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
+}
+
+/* Reset dan basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 600px; /* Mengurangi lebar untuk form */
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid var(--neutral-grey);
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--clean-white);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.edit-btn {
+    background-color: var(--primary-green);
+}
+
+.edit-btn:hover {
+    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background-color: var(--light-orange);
+}
+
+.logout-btn:hover {
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+}
