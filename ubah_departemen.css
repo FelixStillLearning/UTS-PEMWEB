@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -90,16 +90,16 @@ input[type="submit"].btn {
 }
 
 input[type="submit"].btn:hover {
-    background-color: var(--bright-yellow);
-    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    background-color: var(--primary-blue);
+    box-shadow: 0 5px 15px var(--dark-blue);
     transform: translateY(-2px);
 }
 
 /* Back Button */
 .back-btn {
     display: inline-block;
-    margin-top: 1rem; /* Increased margin for better spacing */
-    padding: 0.8rem 0;
+    margin-top: 0.3rem; /* Increased margin for better spacing */
+    padding: 0.8rem 0rem;
     background-color: var(--primary-blue);
     color: var(--clean-white);
     text-decoration: none;
@@ -112,7 +112,8 @@ input[type="submit"].btn:hover {
 }
 
 .back-btn:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
+    box-shadow: 0 5px 15px var(--dark-blue);
     transform: translateY(-2px);
 }
 

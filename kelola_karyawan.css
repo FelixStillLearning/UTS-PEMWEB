@@ -29,7 +29,7 @@ body {
 
 /* Dashboard Container */
 .dashboard-container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
@@ -77,7 +77,7 @@ a {
 /* Tombol Umum Styling */
 .button {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem; /* Padding sama untuk semua tombol */
     border-radius: 5px;
     color: var(--clean-white);
     font-weight: 500;
@@ -104,35 +104,8 @@ a {
 }
 
 /* Tombol Tambah dan Kembali */
-.add-btn{
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background-color:  var(--primary-green);
-color: var(--clean-white);
-text-decoration: none;
-border-radius: 10px;
-font-weight: 500;
-transition: all 0.3s ease;
-margin-top: 1rem;
-}
-
-.add-btn:hover{
-background-color:  #6FBF6F;
-box-shadow: 0 5px 15px rgba(77, 255, 71, 0.2);
-transform: translateY(-2px);
-}
-
-
 .back-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color:  var(--light-orange);
-    color: var(--clean-white);
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
+    background-color: var(--light-orange);
 }
 
 .back-btn:hover {
@@ -145,16 +118,6 @@ transform: translateY(-2px);
 @media (max-width: 768px) {
     body {
         padding: 1rem;
-    }
-
-    .pengguna-table {
-        font-size: 0.9rem;
-        border-radius: 8px; /* Slightly smaller radius for mobile */
-    }
-    
-    .pengguna-table th,
-    .pengguna-table td {
-        padding: 0.8rem;
     }
 }
 
@@ -183,7 +146,7 @@ tr:nth-child(even) {
 }
 
 /* Table Container Wrapper */
-.gaji-table {
+.karyawan-table {
     width: 100%;
     border-collapse: separate;  /* Important: Use separate instead of collapse */
     border-spacing: 0;         /* Remove spacing between cells */
@@ -194,7 +157,7 @@ tr:nth-child(even) {
 }
 
 /* Header Cells */
-.gaji-table th {
+.karyawan-table th {
     background: var(--primary-blue);
     color: var(--clean-white);
     padding: 1rem;
@@ -203,12 +166,12 @@ tr:nth-child(even) {
     border-right: 1px solid var(--neutral-grey);
 }
 
-.gaji-table th:last-child {
+.karyawan-table th:last-child {
     border-right: none;      /* Remove right border on the last header cell */
 }
 
 /* Table Cells */
-.gaji-table td {
+.karyawan-table td {
     padding: 1rem;
     text-align: left;
     border: none;            /* Remove default border */
@@ -216,21 +179,28 @@ tr:nth-child(even) {
     border-bottom: 1px solid var(--neutral-grey);
 }
 
-.gaji-table td:last-child {
+.karyawan-table td:last-child {
     border-right: none;     /* Remove right border on the last cell */
 }
 
 /* Zebra Striping */
-.gaji-table tr:nth-child(even) {
+.karyawan-table tr:nth-child(even) {
     background: var(--light-grey);
 }
 
 /* Last Row */
-.gaji-table tr:last-child td {
+.karyawan-table tr:last-child td {
     border-bottom: none;    /* Remove bottom border on the last row */
 }
 
 /* Hover Effect */
-.gaji-table tbody tr:hover {
+.karyawan-table tbody tr:hover {
     background-color: rgba(135, 206, 235, 0.1); /* Subtle hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .karyawan-table {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
 }

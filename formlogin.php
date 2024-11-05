@@ -14,7 +14,7 @@
     <div class="container d-md-flex align-items-center justify-content-between mt-5">
         <!-- Image Box -->
         <div class="box-1 mt-md-0 mt-5">
-            <img src="../images/gudang.jpeg" alt="gambar gudang">
+            <img src="gudang.jpeg" alt="gambar gudang">
         </div>
 
         <!-- Login Form & Social Login Options -->

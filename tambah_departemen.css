@@ -70,12 +70,20 @@ input[type="text"] {
 /* Button Styling */
 .button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 0.8rem 0rem;
+    border-radius: 10px;
     color: var(--clean-white);
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.3s ease;
     text-align: center;
+    border : none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.button.logout-btn {
+    margin-top: 1rem;
 }
 
 .edit-btn {
@@ -88,12 +96,18 @@ input[type="text"] {
 }
 
 .logout-btn {
-    background-color: var(--light-orange);
+    background-color: var(--primary-blue);
 }
-
+.logout-btn a {
+    color: var(--clean-white);
+    text-decoration: none;
+    display : inline-block;
+    width : 100%;
+    font-weight: 700;
+    font-size: 1rem;
+}
 .logout-btn:hover {
-    background-color: var(--bright-yellow);
-    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+    background-color: var(--dark-blue);
     transform: translateY(-2px);
 }
 
@@ -108,3 +122,4 @@ input[type="text"] {
         padding: 1rem;
     }
 }
+

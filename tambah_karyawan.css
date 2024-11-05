@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -28,8 +28,8 @@ body {
 }
 
 /* Dashboard Container */
-.dashboard-container {
-    max-width: 600px; /* Mengurangi lebar untuk form */
+.container {
+    max-width: 600px;
     margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
@@ -47,42 +47,65 @@ h1 {
 }
 
 /* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form div {
+.form-group {
     margin-bottom: 1rem;
 }
 
 label {
+    display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
+/* 
+input {
+    width: 100%;
+} */
 
-input[type="text"] {
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--neutral-grey);
     border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
-/* Button Styling */
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--neutral-grey);
+}
+
 .button {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: var(--clean-white);
-    font-weight: 700;
+    font-weight: 500;
     transition: all 0.3s ease;
     text-align: center;
-    width : 100%;
+    outline: none !important;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
     border: none;
-    font-size: 700;
+    font-size: 700
 }
 
 .edit-btn {
     background-color: var(--primary-green);
+    outline: none !important;
+    border: none;
+    margin-top: 1rem;
 }
 
 .edit-btn:hover {
@@ -90,21 +113,19 @@ input[type="text"] {
     transform: translateY(-2px);
 }
 
-
 .logout-btn {
     background-color: var(--primary-blue);
     margin-top: 1rem;
 }
 
 .logout-btn:hover {
-    background-color: var(--primary-blue);
-    box-shadow: 0 5px 15px var(--dark-blue);
+    background-color: var(--dark-blue);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
     transform: translateY(-2px);
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
+    .dashboard-container {
         padding: 1rem;
     }
 }

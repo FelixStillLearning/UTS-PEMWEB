@@ -29,6 +29,7 @@ if (!$result) {
 <body>
     <div class="dashboard-container">
         <h1>Kelola Pengguna</h1>
+        <h2>Daftar Pengguna</h2>
         <table class="pengguna-table">
             <tr>
                 <th>Kode Karyawan</th>

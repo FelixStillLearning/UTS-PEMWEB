@@ -1,0 +1,158 @@
+/* Variables for color scheme */
+:root {
+    --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
+    --bright-yellow: #F5C518;
+    --clean-white: #FFFFFF;
+    --light-grey: #F7F7F7;
+    --light-orange: #FFB347;
+    --dark-blue: #1C3A57;
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
+}
+
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--clean-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+/* Form Styling */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--neutral-grey);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-blue);
+}
+
+/* Button Styling */
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--primary-green);
+    color: var(--clean-white);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #6FBF6F;
+    transform: translateY(-2px);
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.button edit-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--clean-white);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    font-size: 700
+}
+
+.edit-btn {
+    background-color: var(--primary-green);
+    outline: none !important;
+    border: none;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.edit-btn:hover {
+    background-color: #6FBF6F;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}
+.back-btn {
+    display: block;
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+}

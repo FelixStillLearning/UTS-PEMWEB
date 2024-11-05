@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ body {
 
 /* Dashboard Container */
 .dashboard-container {
-    max-width: 600px; /* Mengurangi lebar untuk form */
+    max-width: 600px;
     margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
@@ -44,6 +44,7 @@ h1 {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--light-grey);
+    text-align: center;
 }
 
 /* Form Styling */
@@ -59,12 +60,26 @@ form div {
 label {
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: var(--text-dark);
 }
 
-input[type="text"] {
+input[type="number"],
+input[type="date"],
+select {
     padding: 0.5rem;
     border: 1px solid var(--neutral-grey);
     border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 5px rgba(135, 206, 235, 0.5);
 }
 
 /* Button Styling */
@@ -73,12 +88,14 @@ input[type="text"] {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: var(--clean-white);
-    font-weight: 700;
+    font-weight: 500;
     transition: all 0.3s ease;
     text-align: center;
-    width : 100%;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
     border: none;
-    font-size: 700;
+    font-size: 700
 }
 
 .edit-btn {
@@ -86,19 +103,20 @@ input[type="text"] {
 }
 
 .edit-btn:hover {
-    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    background-color: #6FBF6F;
     transform: translateY(-2px);
 }
 
-
 .logout-btn {
-    background-color: var(--primary-blue);
-    margin-top: 1rem;
+    background-color: var(--light-orange);
+    margin-top: 0.3rem;
+    display: inline-block;
+    text-align: center;
 }
 
 .logout-btn:hover {
-    background-color: var(--primary-blue);
-    box-shadow: 0 5px 15px var(--dark-blue);
+    background-color: var(--bright-yellow);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
     transform: translateY(-2px);
 }
 

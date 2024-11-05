@@ -16,53 +16,78 @@ $result = mysqli_query($koneksi, $query);
 <html>
 <head>
     <title>Tambah Gaji</title>
+    <link rel="stylesheet" href="tambah_gaji.css">
 </head>
 <body>
-    <h1>Tambah Gaji</h1>
-    <form action="simpan_gaji.php" method="post">
-        <label>Karyawan:</label>
-        <select name="id_karyawan" required>
-            <option value="">Pilih Karyawan</option>
-            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                <option value="<?php echo htmlspecialchars($row['id_karyawan']); ?>">
-                    <?php echo htmlspecialchars($row['nama_karyawan']); ?>
-                </option>
-            <?php } ?>
-        </select><br><br>
+    <div class="dashboard-container">
+        <h1>Tambah Gaji</h1>
+        <form action="simpan_gaji.php" method="post">
+            <div>
+                <label for="id_karyawan">Karyawan:</label>
+                <select name="id_karyawan" id="id_karyawan" required>
+                    <option value="">Pilih Karyawan</option>
+                    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <option value="<?php echo htmlspecialchars($row['id_karyawan']); ?>">
+                            <?php echo htmlspecialchars($row['nama_karyawan']); ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
 
-        <label>Bulan:</label>
-        <input type="number" name="bulan" min="1" max="12" required><br><br>
+            <div>
+                <label for="bulan">Bulan:</label>
+                <input type="number" id="bulan" name="bulan" min="1" max="12" required>
+            </div>
 
-        <label>Tahun:</label>
-        <input type="number" name="tahun" min="2000" required><br><br>
+            <div>
+                <label for="tahun">Tahun:</label>
+                <input type="number" id="tahun" name="tahun" min="2000" required>
+            </div>
 
-        <label>Gaji Pokok:</label>
-        <input type="number" name="gaji_pokok" required><br><br>
+            <div>
+                <label for="gaji_pokok">Gaji Pokok:</label>
+                <input type="number" id="gaji_pokok" name="gaji_pokok" required>
+            </div>
 
-        <label>Tunjangan Jabatan:</label>
-        <input type="number" name="tunjangan_jabatan" required><br><br>
+            <div>
+                <label for="tunjangan_jabatan">Tunjangan Jabatan:</label>
+                <input type="number" id="tunjangan_jabatan" name="tunjangan_jabatan" required>
+            </div>
 
-        <label>Tunjangan Makan:</label>
-        <input type="number" name="tunjangan_makan" required><br><br>
+            <div>
+                <label for="tunjangan_makan">Tunjangan Makan:</label>
+                <input type="number" id="tunjangan_makan" name="tunjangan_makan" required>
+            </div>
 
-        <label>Tunjangan Transport:</label>
-        <input type="number" name="tunjangan_transport" required><br><br>
+            <div>
+                <label for="tunjangan_transport">Tunjangan Transport:</label>
+                <input type="number" id="tunjangan_transport" name="tunjangan_transport" required>
+            </div>
 
-        <label>Potongan:</label>
-        <input type="number" name="potongan" required><br><br>
+            <div>
+                <label for="potongan">Potongan:</label>
+                <input type="number" id="potongan" name="potongan" required>
+            </div>
 
-        <label>Tanggal Bayar:</label>
-        <input type="date" name="tanggal_bayar" required><br><br>
+            <div>
+                <label for="tanggal_bayar">Tanggal Bayar:</label>
+                <input type="date" id="tanggal_bayar" name="tanggal_bayar" required>
+            </div>
 
-        <label>Status Bayar:</label>
-        <select name="status_bayar" required>
-            <option value="Draft">Draft</option>
-            <option value="Disetujui">Disetujui</option>
-            <option value="Dibayar">Dibayar</option>
-        </select><br><br>
+            <div>
+                <label for="status_bayar">Status Bayar:</label>
+                <select name="status_bayar" id="status_bayar" required>
+                    <option value="Draft">Draft</option>
+                    <option value="Disetujui">Disetujui</option>
+                    <option value="Dibayar">Dibayar</option>
+                </select>
+            </div>
 
-        <input type="submit" value="Simpan">
-    </form>
-    <a href="kelola_gaji.php">Kembali</a>
+            <div>
+                <input type="submit" class="button edit-btn" value="Simpan">
+            </div>
+        </form>
+        <a href="kelola_gaji.php" class="button logout-btn">Kembali</a>
+    </div>
 </body>
 </html>

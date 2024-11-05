@@ -80,15 +80,18 @@ a.button {
     background-color: var(--primary-green);
     color: var(--clean-white);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none; /* Non-underline for anchor links */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
 }
-
+a.button.add-btn {
+    margin-top: 1rem;
+}
 input[type="submit"]:hover,
 a.button:hover {
     background-color: #6FBF6F; /* Warna lebih gelap saat hover */

@@ -1,14 +1,15 @@
-/* kelola_jabatan.css */
-
 /* Variables for color scheme */
 :root {
     --primary-blue: #87CEEB;
+    --primary-green: #A3D8A3;
+    --neutral-grey: #B0B0B0;
     --bright-yellow: #F5C518;
-    --light-orange: #FFB347;
     --clean-white: #FFFFFF;
     --light-grey: #F7F7F7;
-    --text-dark: #333;
+    --light-orange: #FFB347;
     --dark-blue: #1C3A57;
+    --text-dark: #333333;
+    --text-medium: #6D6D6D;
 }
 
 /* Reset and basic styling */
@@ -23,68 +24,80 @@ body {
     font-family: 'Segoe UI', sans-serif;
     color: var(--text-dark);
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Form Container Styling */
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
+/* Dashboard Container */
+.dashboard-container {
     background: var(--clean-white);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
     padding: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
+/* Header Styling */
 h1 {
     color: var(--dark-blue);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 label {
-    display: block;
     font-weight: bold;
-    color: var(--primary-blue);
-    margin-bottom: 0.5rem;
+    color: var(--text-medium);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    padding: 0.8rem;
     border-radius: 5px;
-    margin-bottom: 1.5rem;
+    border: 1px solid var(--neutral-grey);
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
 }
 
 .button {
-    background-color: var(--light-orange);
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
     color: var(--clean-white);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
+    font-weight: 500;
     text-align: center;
+    cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
+    width : 100%;
 }
 
-.button:hover {
-    background-color: var(--bright-yellow);
-    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+.save-btn {
+    background-color: var(--primary-green);
+}
+
+.save-btn:hover {
+    background-color: #6FBF6F; /* Darker green on hover */
 }
 
 .back-btn {
-    display: block;
     background-color: var(--primary-blue);
-    color: var(--clean-white);
-    padding: 10px 15px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
     margin-top: 1rem;
-    transition: all 0.3s ease;
 }
 
 .back-btn:hover {

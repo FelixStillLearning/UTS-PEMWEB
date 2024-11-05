@@ -19,9 +19,14 @@ $row = mysqli_fetch_assoc($result);
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ubah_karyawan.css"> 
     <title>Ubah Karyawan</title>
+    
 </head>
 <body>
+    <div class="container">
     <h1>Ubah Karyawan</h1>
     <form method="POST" action="update_karyawan.php">
         <input type="hidden" name="id_karyawan" value="<?php echo htmlspecialchars($row['id_karyawan']); ?>">
@@ -71,9 +76,9 @@ $row = mysqli_fetch_assoc($result);
             <option value="Aktif" <?php if ($row['status'] == 'Aktif') echo 'selected'; ?>>Aktif</option>
             <option value="Tidak Aktif" <?php if ($row['status'] == 'Tidak Aktif') echo 'selected'; ?>>Tidak Aktif</option>
         </select><br>
-
-        <input type="submit" value="Update">
-    </form>
-    <a href="kelola_karyawan.php">Kembali</a>
+        <input type="submit" value="Update" class="button edit-btn">
+        </form>
+        <a href="kelola_karyawan.php" class="button back-btn">Kembali</a>
+    </div>
 </body>
 </html>

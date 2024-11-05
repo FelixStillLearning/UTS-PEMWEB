@@ -1,4 +1,4 @@
-/* kelola_jabatan.css */
+/* ubah_gaji.css */
 
 /* Variables for color scheme */
 :root {
@@ -41,19 +41,35 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
 label {
     display: block;
     font-weight: bold;
-    color: var(--primary-blue);
+    color: #333;
     margin-bottom: 0.5rem;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 1.5rem;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Hides the spinner on Chrome */
+    margin: 0; /* Removes margin */
 }
 
 .button {
@@ -88,6 +104,6 @@ input[type="text"] {
 }
 
 .back-btn:hover {
-    background-color: var(--primary-blue);
-    box-shadow: 0 5px 15px var(--dark-blue);
+    background-color: var(--dark-blue);
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
 }

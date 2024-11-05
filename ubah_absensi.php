@@ -45,34 +45,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ubah_absensi.css"> <!-- Link ke file CSS -->
     <title>Edit Absensi</title>
 </head>
 <body>
-    <h1>Edit Absensi</h1>
-    <form method="POST">
-        <label>ID Karyawan:</label>
-        <input type="hidden" name="id_karyawan" value="<?php echo htmlspecialchars($absensi['id_karyawan']); ?>" required><br>
-        <input type="text" value="<?php echo htmlspecialchars($absensi['kode_karyawan']); ?>" required readonly><br>
+    <div class="dashboard-container">
+        <h1>Edit Absensi</h1>
+        <form method="POST">
+            <input type="hidden" name="id_karyawan" value="<?php echo htmlspecialchars($absensi['id_karyawan']); ?>" required>
+            <label>ID Karyawan:</label>
+            <input type="text" value="<?php echo htmlspecialchars($absensi['kode_karyawan']); ?>" required readonly>
 
-        <label>Nama Karyawan:</label>
-        <input type="text" name="nama_karyawan" value="<?php echo htmlspecialchars($absensi['nama_karyawan']); ?>" required readonly><br>
+            <label>Nama Karyawan:</label>
+            <input type="text" name="nama_karyawan" value="<?php echo htmlspecialchars($absensi['nama_karyawan']); ?>" required readonly>
 
-        <label>Tanggal:</label>
-        <input type="date" name="tanggal" value="<?php echo htmlspecialchars($absensi['tanggal']); ?>" required><br>
+            <label>Tanggal:</label>
+            <input type="date" name="tanggal" value="<?php echo htmlspecialchars($absensi['tanggal']); ?>" required>
 
-        <label>Status Kehadiran:</label>
-        <select name="status_hadir" required>
-            <option value="Hadir" <?php if ($absensi['status_hadir'] === 'Hadir') echo 'selected'; ?>>Hadir</option>
-            <option value="Izin" <?php if ($absensi['status_hadir'] === 'Izin') echo 'selected'; ?>>Izin</option>
-            <option value="Sakit" <?php if ($absensi['status_hadir'] === 'Sakit') echo 'selected'; ?>>Sakit</option>
-            <option value="Alpa" <?php if ($absensi['status_hadir'] === 'Alpa') echo 'selected'; ?>>Alpa</option>
-        </select><br>
+            <label>Status Kehadiran:</label>
+            <select name="status_hadir" required>
+                <option value="Hadir" <?php if ($absensi['status_hadir'] === 'Hadir') echo 'selected'; ?>>Hadir</option>
+                <option value="Izin" <?php if ($absensi['status_hadir'] === 'Izin') echo 'selected'; ?>>Izin</option>
+                <option value="Sakit" <?php if ($absensi['status_hadir'] === 'Sakit') echo 'selected'; ?>>Sakit</option>
+                <option value="Alpa" <?php if ($absensi['status_hadir'] === 'Alpa') echo 'selected'; ?>>Alpa</option>
+            </select>
 
-        <button type="submit">Update Absensi</button>
-    </form>
-    <br>
-    <a href="kelola_absensi.php">Kembali ke Kelola Absensi</a>
+            <button type="submit" class="button save-btn">Update Absensi</button>
+        </form>
+        <br>
+        <a href="kelola_absensi.php" class="button back-btn">Kembali ke Kelola Absensi</a>
+    </div>
 </body>
 </html>

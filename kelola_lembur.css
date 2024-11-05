@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -46,17 +46,24 @@ h1 {
     border-bottom: 2px solid var(--light-grey);
 }
 
-/* Tabel Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
+/* Button Container */
+.button-container {
+    margin-bottom: 1rem;
 }
+
+/* Table Styling */
+/* table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1.5rem;
+} */
 
 th, td {
     padding: 1rem;
     text-align: left;
-    border: 1px solid var(--neutral-grey);
+    border: none;
+    border-right: 1px solid var(--neutral-grey);
 }
 
 th {
@@ -68,29 +75,29 @@ tr:hover {
     background-color: var(--light-orange);
 }
 
-/* Tautan Styling */
+/* Links Styling */
 a {
     color: var(--dark-blue);
     text-decoration: none;
 }
 
-/* Tombol Umum Styling */
+/* Button General Styling */
 .button {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    color: var(--clean-white);
+    color: var(--primary-green);
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-/* Tombol Aksi */
+/* Button Actions */
 .edit-btn {
     background-color: var(--primary-green);
 }
 
 .edit-btn:hover {
-    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    background-color: #6FBF6F; /* Darker color on hover */
     transform: translateY(-2px);
 }
 
@@ -99,34 +106,33 @@ a {
 }
 
 .delete-btn:hover {
-    background-color: var(--bright-yellow); /* Warna lebih cerah saat hover */
+    background-color: var(--bright-yellow); /* Brighter color on hover */
     transform: translateY(-2px);
 }
 
-/* Tombol Tambah dan Kembali */
-.add-btn{
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background-color:  var(--primary-green);
-color: var(--clean-white);
-text-decoration: none;
-border-radius: 10px;
-font-weight: 500;
-transition: all 0.3s ease;
-margin-top: 1rem;
+/* Add Button */
+.add-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-green);
+    color: var(--clean-white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.add-btn:hover{
-background-color:  #6FBF6F;
-box-shadow: 0 5px 15px rgba(77, 255, 71, 0.2);
-transform: translateY(-2px);
+.add-btn:hover {
+    background-color: #6FBF6F;
+    box-shadow: 0 5px 15px rgba(77, 255, 71, 0.2);
+    transform: translateY(-2px);
 }
 
-
+/* Back Button */
 .back-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color:  var(--light-orange);
+    background-color: var(--light-orange);
     color: var(--clean-white);
     text-decoration: none;
     border-radius: 10px;
@@ -158,7 +164,7 @@ transform: translateY(-2px);
     }
 }
 
-/* Additional Animation for Table Rows */
+/* Animation for Table Rows */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -183,7 +189,7 @@ tr:nth-child(even) {
 }
 
 /* Table Container Wrapper */
-.gaji-table {
+.pengguna-table {
     width: 100%;
     border-collapse: separate;  /* Important: Use separate instead of collapse */
     border-spacing: 0;         /* Remove spacing between cells */
@@ -194,7 +200,7 @@ tr:nth-child(even) {
 }
 
 /* Header Cells */
-.gaji-table th {
+.pengguna-table th {
     background: var(--primary-blue);
     color: var(--clean-white);
     padding: 1rem;
@@ -203,12 +209,12 @@ tr:nth-child(even) {
     border-right: 1px solid var(--neutral-grey);
 }
 
-.gaji-table th:last-child {
+.pengguna-table th:last-child {
     border-right: none;      /* Remove right border on the last header cell */
 }
 
 /* Table Cells */
-.gaji-table td {
+.pengguna-table td {
     padding: 1rem;
     text-align: left;
     border: none;            /* Remove default border */
@@ -216,21 +222,21 @@ tr:nth-child(even) {
     border-bottom: 1px solid var(--neutral-grey);
 }
 
-.gaji-table td:last-child {
+.pengguna-table td:last-child {
     border-right: none;     /* Remove right border on the last cell */
 }
 
 /* Zebra Striping */
-.gaji-table tr:nth-child(even) {
+.pengguna-table tr:nth-child(even) {
     background: var(--light-grey);
 }
 
 /* Last Row */
-.gaji-table tr:last-child td {
+.pengguna-table tr:last-child td {
     border-bottom: none;    /* Remove bottom border on the last row */
 }
 
 /* Hover Effect */
-.gaji-table tbody tr:hover {
+.pengguna-table tbody tr:hover {
     background-color: rgba(135, 206, 235, 0.1); /* Subtle hover effect */
 }

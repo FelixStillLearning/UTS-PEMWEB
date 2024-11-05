@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -22,89 +22,87 @@
 body {
     background: var(--light-grey);
     font-family: 'Segoe UI', sans-serif;
-    min-height: 100vh;
     color: var(--text-dark);
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Dashboard Container */
 .dashboard-container {
-    max-width: 600px; /* Mengurangi lebar untuk form */
-    margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(28, 58, 87, 0.08);
     padding: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 /* Header Styling */
 h1 {
     color: var(--dark-blue);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-grey);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 /* Form Styling */
 form {
     display: flex;
     flex-direction: column;
-}
-
-form div {
-    margin-bottom: 1rem;
+    gap: 1rem;
 }
 
 label {
-    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: var(--text-medium);
 }
 
-input[type="text"] {
-    padding: 0.5rem;
-    border: 1px solid var(--neutral-grey);
+input[type="date"],
+input[type="text"],
+select {
+    padding: 0.8rem;
     border-radius: 5px;
+    border: 1px solid var(--neutral-grey);
+    font-size: 1rem;
 }
 
-/* Button Styling */
+input[type="text"][readonly] {
+    background-color: var(--light-grey);
+}
+
 .button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
     color: var(--clean-white);
-    font-weight: 700;
-    transition: all 0.3s ease;
+    font-weight: 500;
     text-align: center;
-    width : 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
     border: none;
-    font-size: 700;
+    width : 100%;
 }
 
-.edit-btn {
+.save-btn {
     background-color: var(--primary-green);
+    text-decoration: none;
+    display: inline-block;
 }
 
-.edit-btn:hover {
-    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
-    transform: translateY(-2px);
+.save-btn:hover {
+    background-color: #6FBF6F; /* Darker green on hover */
 }
 
-
-.logout-btn {
+.back-btn {
     background-color: var(--primary-blue);
-    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.3rem;
 }
 
-.logout-btn:hover {
+.back-btn:hover {
     background-color: var(--primary-blue);
     box-shadow: 0 5px 15px var(--dark-blue);
-    transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
 }

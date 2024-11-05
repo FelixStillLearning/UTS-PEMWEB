@@ -42,17 +42,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Jabatan</title>
-    <link href="kelola_jabatan.css" rel="stylesheet"> <!-- Menghubungkan file CSS -->
+    <link href="ubah_jabatan.css" rel="stylesheet"> <!-- Menghubungkan file CSS -->
 </head>
 <body>
     <div class="form-container">
         <h1>Ubah Jabatan</h1>
         <form method="POST">
             <label>Nama Jabatan:</label>
-            <input type="text" name="nama_jabatan" value="<?php echo htmlspecialchars($jabatan['nama_jabatan']); ?>" required><br>
-            <button type="submit">Update</button>
+            <input type="text" name="nama_jabatan" value="<?php echo htmlspecialchars($jabatan['nama_jabatan']); ?>" required>
+            <button type="submit" class="button">Update</button>
         </form>
-        <br>
         <a href="kelola_jabatan.php" class="button back-btn">Kembali ke Kelola Jabatan</a>
     </div>
 </body>

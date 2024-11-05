@@ -40,15 +40,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Ubah Departemen</title>
+    <!-- Tambahkan link ke file CSS -->
+    <link rel="stylesheet" href="ubah_departemen.css">
 </head>
 <body>
-    <h1>Ubah Departemen</h1>
-    <form method="POST">
-        <label>Nama Departemen:</label>
-        <input type="text" name="nama_departemen" value="<?php echo $departemen['nama_departemen']; ?>" required><br>
-        <button type="submit">Update</button>
-    </form>
-    <br>
-    <a href="kelola_departemen.php">Kembali ke Kelola Departemen</a>
+    <div class="dashboard-container">
+        <h1>Ubah Departemen</h1>
+        <form method="POST">
+            <label>Nama Departemen:</label>
+            <input type="text" name="nama_departemen" value="<?php echo $departemen['nama_departemen']; ?>" required>
+            <input type="submit" class="btn" value="Update">
+        </form>
+        <br>
+        <a href="kelola_departemen.php" class="back-btn">Kembali ke Kelola Departemen</a>
+    </div>
 </body>
 </html>

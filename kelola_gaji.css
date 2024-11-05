@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ body {
 
 /* Dashboard Container */
 .dashboard-container {
-    max-width: 1200px;
+    /* max-width: 2000px; */
     margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
@@ -46,12 +46,12 @@ h1 {
     border-bottom: 2px solid var(--light-grey);
 }
 
-/* Tabel Styling */
-table {
+/* Table Styling */
+/* table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1.5rem;
-}
+} */
 
 th, td {
     padding: 1rem;
@@ -68,13 +68,7 @@ tr:hover {
     background-color: var(--light-orange);
 }
 
-/* Tautan Styling */
-a {
-    color: var(--dark-blue);
-    text-decoration: none;
-}
-
-/* Tombol Umum Styling */
+/* Button Styling */
 .button {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -84,13 +78,21 @@ a {
     transition: all 0.3s ease;
 }
 
-/* Tombol Aksi */
+.add-btn {
+    background-color: var(--primary-green);
+}
+
+.add-btn:hover {
+    background-color: #6FBF6F;
+    transform: translateY(-2px);
+}
+
 .edit-btn {
     background-color: var(--primary-green);
 }
 
 .edit-btn:hover {
-    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    background-color: #6FBF6F;
     transform: translateY(-2px);
 }
 
@@ -99,45 +101,16 @@ a {
 }
 
 .delete-btn:hover {
-    background-color: var(--bright-yellow); /* Warna lebih cerah saat hover */
+    background-color: var(--bright-yellow);
     transform: translateY(-2px);
 }
 
-/* Tombol Tambah dan Kembali */
-.add-btn{
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background-color:  var(--primary-green);
-color: var(--clean-white);
-text-decoration: none;
-border-radius: 10px;
-font-weight: 500;
-transition: all 0.3s ease;
-margin-top: 1rem;
-}
-
-.add-btn:hover{
-background-color:  #6FBF6F;
-box-shadow: 0 5px 15px rgba(77, 255, 71, 0.2);
-transform: translateY(-2px);
-}
-
-
 .back-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color:  var(--light-orange);
-    color: var(--clean-white);
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
+    background-color: var(--light-orange);
 }
 
 .back-btn:hover {
     background-color: var(--bright-yellow);
-    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
     transform: translateY(-2px);
 }
 
@@ -146,50 +119,16 @@ transform: translateY(-2px);
     body {
         padding: 1rem;
     }
-
-    .pengguna-table {
-        font-size: 0.9rem;
-        border-radius: 8px; /* Slightly smaller radius for mobile */
-    }
-    
-    .pengguna-table th,
-    .pengguna-table td {
-        padding: 0.8rem;
-    }
-}
-
-/* Additional Animation for Table Rows */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-tr {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-tr:nth-child(odd) {
-    animation-delay: 0.1s;
-}
-
-tr:nth-child(even) {
-    animation-delay: 0.2s;
 }
 
 /* Table Container Wrapper */
 .gaji-table {
-    width: 100%;
+    /* width: 100%; */
     border-collapse: separate;  /* Important: Use separate instead of collapse */
     border-spacing: 0;         /* Remove spacing between cells */
     margin-top: 1rem;
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: scroll ;
     box-shadow: 0 0 0 1px var(--neutral-grey); /* Outline for the entire table */
 }
 

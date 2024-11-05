@@ -12,7 +12,7 @@
     --text-medium: #6D6D6D;
 }
 
-/* Reset dan basic styling */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ body {
 
 /* Dashboard Container */
 .dashboard-container {
-    max-width: 600px; /* Mengurangi lebar untuk form */
+    max-width: 600px;
     margin: 0 auto;
     background: var(--clean-white);
     border-radius: 20px;
@@ -47,24 +47,36 @@ h1 {
 }
 
 /* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form div {
+.form-group {
     margin-bottom: 1rem;
 }
 
 label {
+    display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-input[type="text"] {
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--neutral-grey);
     border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-blue);
 }
 
 /* Button Styling */
@@ -73,12 +85,8 @@ input[type="text"] {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: var(--clean-white);
-    font-weight: 700;
+    font-weight: 500;
     transition: all 0.3s ease;
-    text-align: center;
-    width : 100%;
-    border: none;
-    font-size: 700;
 }
 
 .edit-btn {
@@ -86,25 +94,22 @@ input[type="text"] {
 }
 
 .edit-btn:hover {
-    background-color: #6FBF6F; /* Warna lebih gelap saat hover */
+    background-color: #6FBF6F;
     transform: translateY(-2px);
 }
 
-
-.logout-btn {
-    background-color: var(--primary-blue);
-    margin-top: 1rem;
+.back-btn {
+    background-color: var(--light-orange);
 }
 
-.logout-btn:hover {
-    background-color: var(--primary-blue);
-    box-shadow: 0 5px 15px var(--dark-blue);
+.back-btn:hover {
+    background-color: var(--bright-yellow);
     transform: translateY(-2px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
+    .dashboard-container {
         padding: 1rem;
     }
 }

@@ -33,7 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div>
                 <button type="submit" class="button edit-btn">Simpan Departemen</button>
-                <a href="kelola_departemen.php" class="button logout-btn">Kembali</a>
+                <button type="button" class="button logout-btn">
+                    <a href="kelola_departemen.php">&larr; Kembali</a>
+                </button>
             </div>
         </form>
     </div>
